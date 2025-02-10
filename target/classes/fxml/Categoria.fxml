@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.CategoriaController">
+   <center>
+      <TableView fx:id="tableCategoria" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="nombre" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="description" prefWidth="449.0" text="Descripción" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button defaultButton="true" mnemonicParsing="false" onAction="#onAñadirAction" text="Añadir" />
+            <Button mnemonicParsing="false" onAction="#onEliminarAction" text="Eliminar" />
+        </items>
+      </ToolBar>
+   </bottom>
+</BorderPane>

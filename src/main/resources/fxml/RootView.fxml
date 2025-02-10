@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <TabPane fx:id="tabVista" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="inventario" text="Inventario">
+            <content>
+                <fx:include source="Table.fxml" />
+            </content>
+          </Tab>
+          <Tab fx:id="categorias" text="Categorias">
+            <content>
+                <fx:include source="Categoria.fxml" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </top>
+</BorderPane>

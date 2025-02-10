@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.TableController">
+   <center>
+      <TableView fx:id="tableInventario" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+        <columns>
+          <TableColumn fx:id="id" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="65.0" text="Id" />
+          <TableColumn fx:id="Nombre" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="184.0" text="Nombre" />
+            <TableColumn fx:id="Description" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="140.0" text="Descripccion" />
+            <TableColumn fx:id="fecha" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="114.0" text="Fecha" />
+            <TableColumn fx:id="Estado" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="124.0" text="Estado" />
+            <TableColumn fx:id="Precio" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="122.0" text="Precio" />
+            <TableColumn fx:id="Categoria" prefWidth="75.0" text="Categoria" />
+            <TableColumn fx:id="Stock" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="75.0" text="Stock" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox>
+               <children>
+                  <Button fx:id="Añadir" defaultButton="true" mnemonicParsing="false" onAction="#onAñadirButton" text="Añadir">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Eliminar" mnemonicParsing="false" onAction="#onEliminarAction" text="Eliminar">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onDesconectarAction" text="Sign out">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onDarseAction" text="Darse de baja">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onObtenerAction" text="Obtener Todos" />
+                  <Button fx:id="Filtrar" mnemonicParsing="false" onAction="#onFiltrarAction" text="Filtrar">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <ComboBox fx:id="Nombre_Filtrar" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </top>
+</BorderPane>

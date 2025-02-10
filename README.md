@@ -1,2 +1,1 @@
-# Nosql
-No sql
+# nosql
